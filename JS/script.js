@@ -65,3 +65,16 @@ const traduzir = () => { // descriptografar
         return
     }
 }
+
+function copiarTexto() {
+    if(bool){
+    let inputElement = document.querySelector('#ta');
+
+    inputElement.select();
+    document.execCommand("copy");
+
+    inputElement.blur();
+
+    alert("Texto copiado para a área de transferência!");
+    } else return
+}
