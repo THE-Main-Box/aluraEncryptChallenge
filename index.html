@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Decodificador</title>
+    <link rel="stylesheet" href="/css/tBox.css">
+    <link rel="stylesheet" href="/css/page.css">
+    <link rel="stylesheet" href="/css/buttonsD.css">
+    <link rel="stylesheet" href="/css/rodape.css">
+    <link rel="stylesheet" href="/css/translate.css">
+
+    <script src="/JS/script.js" defer></script>
+</head>
+<body>
+    <header>
+        <img src="/img/Frame 6.png" alt="logo da Alura">
+    </header>
+
+    <main class="formcontent" >
+
+        <div>
+            <form action="">
+                <input type="text" name="decText" id="decText" placeholder="Digite seu texto">
+                <div id="alert">
+                    <img src="/img/Group.png" alt="Apenas letras minúsculas e sem acento.">
+                    <p>Apenas letras minúsculas e sem acento.</p>
+                </div>
+                <div id="buttonsPack">
+                    <button type="button" onclick="change()" id="crip" style="order: 0;">Criptografar</button>
+                    <button type="button" onclick="traduzir()" id="desc" style="order: 1;">Descriptografar</button>
+                </div>
+            </form>
+        </div>
+
+        <div class="translate">
+            <h1 class="message ">Nenhuma mensagem encontrada</h1>
+            <p class="message ">Digite um texto que você deseja criptografar ou descriptografar.</p>
+            <textarea name="traducao" id="ta" class="traducao" cols="30" rows="10" readonly>
+            </textarea>
+            <button id="copybtn">Copiar</button>
+        </div>
+    </main>
+
+    <footer class="rodape">
+        <h1>Desafio Concluido !! :></h1>
+        <p>Meu nome é Thiago Barbosa e esse decodificador foi um desafio da ONE</p>
+        <a href="https://github.com/THE-Main-Box" target="_blank">GitHub</a>
+        <a href="https://www.linkedin.com/in/thiago-barbosa-05b9752a1/" target="_blank">LinkedIn</a>
+    </footer>
+</body>
+</html>

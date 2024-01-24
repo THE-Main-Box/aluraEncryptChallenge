@@ -1,0 +1,58 @@
+*{
+   margin: 0; 
+   padding: 0;
+   box-sizing: border-box;
+}
+
+:root {
+    --base: #E9ECF8;
+    --blue: #0A3871;
+}
+
+body {
+    background-color: var(--base);
+    margin: 1rem;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+main.formcontent {
+    display: flex;
+    flex-direction: column;
+    margin: 2rem;
+}
+
+main.formcontent input[type="text"]::placeholder,
+main.formcontent input[type="text"] {
+    color: var(--blue);
+}
+
+main.formcontent input[type="text"] {    
+    background-color: var(--base);
+
+    margin-left: 16.6%;
+    margin-top: 5%;
+    width: 40%;
+
+    font-style: none;
+    font-size: 32px;
+
+    border: none;
+    outline: none;
+}
+
+
+
+/* Adicione estas linhas dentro da sua media query */
+@media only screen and (max-width: 600px) {
+    main.formcontent {
+        flex-direction: column;
+    }
+
+    main.formcontent input[type="text"] {
+        margin-left: 0;
+        margin-top: 2%;
+        width: 100%;
+    }
+
+    
+}

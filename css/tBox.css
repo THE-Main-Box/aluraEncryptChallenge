@@ -1,0 +1,53 @@
+div.translate {
+    background-color: white;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    text-align: center;
+
+
+    position: absolute;
+    left: 65%;
+    margin: 2.7%;
+
+    min-height: 27.7%;
+    height: 65.5%;
+    width: 47vh;
+    border-radius: 32px;
+}
+
+div.translate h1.message {
+    font-size: 24px;
+}
+div.translate p.message {
+    font-size: 16px;
+}
+
+#alert {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+
+    margin-top: 20%;
+}
+
+
+@media only screen and (max-width: 600px) {
+div.translate {
+    order: 1;
+    position: static;
+    margin: 2rem, 0 , 0, 0;
+
+    width: 90%;
+    height: 20vh;
+    margin: 49.9%, 2.7%, 2.7%, 2.7%;
+}
+
+div.translate h1.message,
+div.translate p.message{
+    font-size: calc(15px);
+}
+}
