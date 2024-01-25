@@ -2,6 +2,8 @@ textarea.traducao {
     resize: none;
     color: #0A3871;
 
+    user-select: none;
+
     font-family: Arial, Helvetica, sans-serif;
     font-size: large;
 }
