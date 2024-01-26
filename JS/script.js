@@ -91,6 +91,6 @@ function copiarTexto() {
     inputElement.select();
     document.execCommand("copy");
 
-    alert("Texto copiado para a área de transferência!")
+    alert("Texto copiado para a área de transferência!");
   } else return;
 }
