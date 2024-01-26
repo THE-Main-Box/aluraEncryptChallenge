@@ -40,6 +40,17 @@ main.formcontent input[type="text"] {
     outline: none;
 }
 
+div.translate {
+    height: fit-content;
+    width: fit-content;
+
+    min-height: 10rem;
+    min-width: 25rem;
+
+    margin-top: 2.5rem;
+
+}
+
 
 
 /* Adicione estas linhas dentro da sua media query */
@@ -54,5 +65,14 @@ main.formcontent input[type="text"] {
         width: 100%;
     }
 
-    
+    div.translate {
+        display: flex;
+        flex-direction: column;
+
+        height: fit-content ;
+
+        padding-top: 1rem;
+        padding-bottom: 2.5rem;
+
+    }
 }
