@@ -43,8 +43,21 @@ const change = () => {
 
   toEncrypt.focus();
   if (bool) {
+    let tb = document.querySelector("#ta").style;
+    let cbtn = document.querySelector("#copybtn").style;
+
+    tb.display = "flex";
+    tb.flexDirection = "column";
+
+    cbtn.display = "block";
+
     textarea.value = Encrypt(toEncrypt.value);
-  } else return;
+  } else {
+    let tb = document.querySelector("#ta").style;
+    let cbtn = document.querySelector("#copybtn").style;
+    tb.display = "none";
+    cbtn.display = "none";
+  }
 };
 
 const traduzir = () => {
@@ -57,15 +70,26 @@ const traduzir = () => {
 
   if (bool) {
     textarea.value = Desencrypt(toDesEncrypt);
+
+    let tb = document.querySelector("#ta").style;
+    let cbtn = document.querySelector("#copybtn").style;
+
+    tb.display = "flex";
+    tb.flexDirection = "column";
+
+    cbtn.display = "block";
   } else {
-    return;
+    let tb = document.querySelector("#ta").style;
+    let cbtn = document.querySelector("#copybtn").style;
+    tb.display = "none";
+    cbtn.display = "none";
   }
 };
 
 function copiarTexto() {
   if (bool) {
     let inputElement = document.querySelector("#ta");
-    document.querySelector('input[name="decText"]').value = ''
+    document.querySelector('input[name="decText"]').value = "";
 
     inputElement.select();
     document.execCommand("copy");
