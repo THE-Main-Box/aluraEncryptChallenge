@@ -1,11 +1,26 @@
 textarea.traducao {
     resize: none;
     color: #0A3871;
+    border: none;
+    font-weight: 100;
+    padding-bottom: 5rem;
+
+    user-select: none;
+    display: none;
+
+    width: 17.4rem;
 
     user-select: none;
 
     font-family: Arial, Helvetica, sans-serif;
     font-size: large;
+}
+
+#copybtn {
+    display: none;
+
+    margin-top: 2rem;
+    margin-bottom: 2rem;
 }
 
 h1.true,

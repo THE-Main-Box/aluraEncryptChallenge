@@ -1,6 +1,9 @@
 let bool = false;
 let textarea = document.querySelector("#ta");
 
+let tb = document.querySelector("#ta").style;
+let cbtn = document.querySelector("#copybtn").style;
+
 const substitutionMap = {
   a: "ai",
   e: "enter",
@@ -38,13 +41,30 @@ const attClasse = () => {
 const change = () => {
   // criptografar
   let toEncrypt = document.querySelector('input[name="decText"]');
-  bool = toEncrypt.value.trim() !== "";
+  let alertText = document.querySelector("#alert p");
+
+  bool = toEncrypt.value.trim() !== "" && !verifyText(alertText);
+  if (!verifyText(toEncrypt.value) && toEncrypt.value.trim() !== "") {
+    alertText.style.fontWeight = 700;
+    alertText.textContent = "Apenas letras minúsculas e sem acento são permitidas!";
+    return
+  } else {
+    alertText.style.fontWeight = "";
+    alertText.textContent = "Apenas letras minúsculas e sem acento.";
+  }
   attClasse();
 
   toEncrypt.focus();
   if (bool) {
+    tb.display = "flex";
+    tb.flexDirection = "column";
+    cbtn.display = "block";
+
     textarea.value = Encrypt(toEncrypt.value);
-  } else return;
+  } else {
+    tb.display = "none";
+    cbtn.display = "none";
+  }
 };
 
 const traduzir = () => {
@@ -57,19 +77,29 @@ const traduzir = () => {
 
   if (bool) {
     textarea.value = Desencrypt(toDesEncrypt);
+
+    tb.display = "flex";
+    tb.flexDirection = "column";
+    cbtn.display = "block";
   } else {
-    return;
+    tb.display = "none";
+    cbtn.display = "none";
   }
 };
 
 function copiarTexto() {
   if (bool) {
     let inputElement = document.querySelector("#ta");
-    document.querySelector('input[name="decText"]').value = ''
+    document.querySelector('input[name="decText"]').value = "";
 
     inputElement.select();
     document.execCommand("copy");
 
     alert("Texto copiado para a área de transferência!");
   } else return;
+}
+
+function verifyText(textiInput) {
+  const regex = /^[a-z\s]+$/u;
+  return regex.test(textiInput);
 }
