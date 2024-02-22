@@ -91,6 +91,7 @@ function copiarTexto() {
   if (bool) {
     let inputElement = document.querySelector("#ta");
     document.querySelector('input[name="decText"]').value = "";
+    document.querySelector('textarea[name="traducao"]').value = "";
 
     inputElement.select();
     document.execCommand("copy");
