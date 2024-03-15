@@ -93,7 +93,7 @@ function copiarTexto() {
     
     inputElement.select();
     document.execCommand("copy");
-    
+
     document.querySelector('input[name="decText"]').value = "";
     document.querySelector('textarea[name="traducao"]').value = "";
 
