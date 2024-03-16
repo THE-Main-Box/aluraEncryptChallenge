@@ -27,30 +27,27 @@ div#buttonsPack button {
 }
 
 div#buttonsPack button#desc,
-button#copybtn {
+button#copybtn,
+button#crip{
     background-color: lightgrey;
     color: black;
     transition: all .5s;
 }
+
 div#buttonsPack button#desc:hover
-,button#copybtn:hover {
+,button#copybtn:hover,
+button#crip:hover {
     background-color: #072B61;
     color: white;
 }
 
-
-div#buttonsPack button#crip {
-    background-color: #072B61;
-    color: white;
-    transition: all .5s;
-}
-div#buttonsPack button#crip:hover {
-    background-color: rgba(255, 255, 255, 0);
-    color: black;
-}
-
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 650px) {
     #buttonsPack {
         margin: 2.7vh;
     }
+    div#buttonsPack button#crip,
+    div#buttonsPack button#desc {
+        min-width: 10rem;
+    }
+    
 }
